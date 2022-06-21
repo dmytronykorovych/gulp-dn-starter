@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "Syler.sass-indented",
+    "stylelint.vscode-stylelint",
+    "EditorConfig.EditorConfig",
+    "mkaufman.HTMLHint",
+    "dbaeumer.vscode-eslint",
+    "rebornix.project-snippets"
+  ]
+}
