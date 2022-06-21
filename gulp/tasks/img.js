@@ -2,6 +2,7 @@ import pkg from "gulp";
 import gulpIf from "gulp-if";
 import imageMin, { mozjpeg, svgo } from "gulp-imagemin";
 import imageMinPngQuant from "imagemin-pngquant";
+import webp from "gulp-webp";
 import newer from "gulp-newer";
 import path from "../config.js";
 
