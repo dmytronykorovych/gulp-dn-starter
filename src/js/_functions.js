@@ -1,3 +1,1 @@
-import isWebp from "./functions/isWebp.js";
-
-isWebp();
+import "./functions/isWebp.js";

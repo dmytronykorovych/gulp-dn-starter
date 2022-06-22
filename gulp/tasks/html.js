@@ -16,7 +16,7 @@ export const htmlBuild = () =>
         basepath: "@file",
       }),
     )
-    .pipe(gulpIf(path.isDev, htmlBeautify({ indent_size: 2 })))
+    .pipe(gulpIf(!path.isProd, htmlBeautify({ indent_size: 2 })))
     .pipe(gulpIf(path.isProd, htmlMin({ collapseWhitespace: true })))
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());

@@ -1,4 +1,4 @@
-@use "../helpers" as *;
+@use "../abstracts" as *;
 
 html {
   box-sizing: border-box;
@@ -19,9 +19,9 @@ html {
   min-width: $min-width;
   min-height: 100%;
   margin: 0;
-  font-size: $font-size;
-  font-family: $font-family;
-  line-height: $line-height;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
 }
 
 img {
@@ -41,49 +41,7 @@ a {
 .container {
   max-width: $container-width;
   margin: 0 auto;
-  padding: 0 $container-offset;
-}
-
-.is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
-}
-
-.btn-reset {
-  padding: 0;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.input-reset {
-  background-color: #fff;
-  border: none;
-  border-radius: 0;
-  appearance: none;
-
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    display: none;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+  padding: 0 $container-padding;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

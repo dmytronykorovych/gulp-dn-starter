@@ -1,0 +1,34 @@
+@use "./vars" as *;
+@use "./functions" as *;
+
+// font face
+@mixin font-face($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-weight: $weight;
+    font-family: $font_name;
+    font-style: $style;
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{$file_name}.woff") format("woff");
+    font-display: swap;
+  }
+}
+
+// breakpoints
+
+@mixin media-min($min) {
+  @media (min-width: get-breakpoints($min)) {
+    @content;
+  }
+}
+
+@mixin media-max($max) {
+  @media (max-width: get-breakpoints($max)) {
+    @content;
+  }
+}
+
+@mixin media-between($min, $max) {
+  @media (min-width: get-breakpoints($min)) and (max-width: get-breakpoints($max)) {
+    @content;
+  }
+}
